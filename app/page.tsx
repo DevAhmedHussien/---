@@ -13,7 +13,7 @@ import { Contact } from "@/components/contact/page";
 export default function Home() {
   return (
       
-      <div   className="oabslute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,1))] dark:bg-grid-slate-700/700 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0))]" >
+      <div>
       {/* Hero Section */}
       <HeroSection/>
 

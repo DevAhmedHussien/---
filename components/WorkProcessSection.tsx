@@ -5,31 +5,35 @@ import Image from "next/image";
 
 const processes = [
   {
-    title: "1. Research & Discovery",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-    description: "Understand the project's goals, audience, and requirements.",
+    title: "1. Заявка",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+    description: "Вы звоните нам по телефону +7 (999) 366-82-22 или оставляете заявку на сайте.",
   },
   {
-    title: "2. Ideation & Planning",
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80",
-    description: "Outline the structure and flow of the project.",
+    title: "2. Уточнение заказа",
+    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    description: "Мы уточняем объем работ, удобное время приезда мастера и необходимость покупки материалов.",
   },
   {
-    title: "3. Design & Development",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-    description: "Create visually appealing and functional interfaces.",
+    title: "3. Выезд мастера",
+    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    description: "Мастер приезжает в оговоренное время, без опоздания, со всем необходимым.",
   },
   {
-    title: "4. Launch & Deliver",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-    description: "Deliver the product to the client, ensuring long-term success.",
+    title: "4. Осмотр и выполнение работы",
+    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    description: "Мастер осматривает объект, называет финальную цену и выполняет работу после вашего согласия.",
+  },
+  {
+    title: "5. Оплата",
+    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    description: "Вы принимаете работу и оплачиваете ее наличными или переводом на карту мастера.",
   },
 ];
 
 const WorkProcessSection: React.FC = () => {
   return (
-    <section className="py-20 " id="process">
-      {/* bg-gradient-to-b from-gray-100 to-white */}
+    <section className="py-20" id="процесс">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -39,7 +43,7 @@ const WorkProcessSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Our Work Process
+            Как мы работаем
           </motion.h2>
           <motion.p
             className="text-gray-600 max-w-2xl mx-auto"
@@ -48,10 +52,10 @@ const WorkProcessSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Streamlining workflows with research, planning, design, development, and seamless delivery.
+            Простой и прозрачный процесс работы с гарантией качества и удобной оплатой.
           </motion.p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {processes.map((process, index) => (
             <motion.div
               key={index}

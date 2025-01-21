@@ -3,51 +3,57 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaUsers,
-  FaLaptop,
-  FaMobileAlt,
-  FaCloud,
-  FaDatabase,
-  FaRobot,
+  FaWrench,
+  FaTint,
+  FaShower,
+  FaBath,
+  FaToilet,
+  FaTools,
 } from "react-icons/fa";
 
 const services = [
   {
-    icon: <FaLaptop className="h-12 w-12 mb-4 text-primary" />,
-    title: "Web Application Development",
-    description: "Cutting-edge web apps tailored for your business needs.",
+    icon: <FaTint className="h-12 w-12 mb-4 text-primary" />,
+    title: "Устранение протечек",
+    description: "Устранение протечек раковины, смесителя, унитаза, ванны или батареи.",
+    price: "от 1 200 ₽",
   },
   {
-    icon: <FaMobileAlt className="h-12 w-12 mb-4 text-primary" />,
-    title: "Mobile Application Development",
-    description: "Intuitive and user-friendly mobile apps for Android and iOS.",
+    icon: <FaTools className="h-12 w-12 mb-4 text-primary" />,
+    title: "Устранение засоров",
+    description: "Устранение засоров раковины, туалета, ванны или канализации.",
+    price: "от 1 190 ₽",
   },
   {
-    icon: <FaCloud className="h-12 w-12 mb-4 text-primary" />,
-    title: "Cloud Integration & Solutions",
-    description: "Seamless integration and optimization of cloud services.",
+    icon: <FaWrench className="h-12 w-12 mb-4 text-primary" />,
+    title: "Установка смесителей",
+    description: "Установка смесителей на раковину, мойку, ванну или душевую кабину.",
+    price: "от 1 190 ₽",
   },
   {
-    icon: <FaDatabase className="h-12 w-12 mb-4 text-primary" />,
-    title: "Data Analytics & Management",
-    description: "Leverage data for insights and smarter decision-making.",
+    icon: <FaShower className="h-12 w-12 mb-4 text-primary" />,
+    title: "Ремонт душевой кабины",
+    description: "Ремонт, герметизация и установка душевых кабин.",
+    price: "от 2 890 ₽",
   },
   {
-    icon: <FaRobot className="h-12 w-12 mb-4 text-primary" />,
-    title: "AI & Automation",
-    description: "Empower your business with intelligent automation and AI-driven tools.",
+    icon: <FaToilet className="h-12 w-12 mb-4 text-primary" />,
+    title: "Установка унитаза",
+    description: "Установка напольных, подвесных унитазов и инсталляций.",
+    price: "от 2 050 ₽",
   },
   {
-    icon: <FaUsers className="h-12 w-12 mb-4 text-primary" />,
-    title: "IT Staffing",
-    description: "Expert IT professionals for your temporary and permanent needs.",
+    icon: <FaBath className="h-12 w-12 mb-4 text-primary" />,
+    title: "Ремонт сантехники",
+    description: "Ремонт и замена сантехнического оборудования любой сложности.",
+    price: "от 1 500 ₽",
   },
 ];
 
 const ServicesSection: React.FC = () => {
   return (
     <motion.section
-      id="services"
+      id="услуги"
       className="py-20 min-h-[85vh]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -63,7 +69,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 1 }}
           >
-            Our Services
+            Чем мы можем помочь
           </motion.h2>
           <motion.p
             className="text-muted-foreground max-w-2xl mx-auto"
@@ -72,7 +78,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 1 }}
           >
-            Comprehensive IT solutions tailored to your business needs.
+            Профессиональные сантехнические услуги в Тюмени с гарантией качества.
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-20">
@@ -87,7 +93,8 @@ const ServicesSection: React.FC = () => {
             >
               {service.icon}
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <p className="text-muted-foreground mb-4">{service.description}</p>
+              <p className="text-lg font-bold text-primary">{service.price}</p>
             </motion.div>
           ))}
         </div>

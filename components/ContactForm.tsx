@@ -1,156 +1,180 @@
-'use client';
+"use client";
 
-import React, { useRef, useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
-const ContactForm: React.FC = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+interface ContactFormProps {
+  onClose: () => void;
+  onSuccess: () => void;
+}
 
-  const validateForm = (formData: FormData) => {
-    let isValid = true;
-    const newErrors = { name: "", email: "", message: "" };
+export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
+  const [formStatus, setFormStatus] = useState("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
 
-    // Name validation
-    if (!formData.get("user_name")) {
-      newErrors.name = "Name is required.";
-      isValid = false;
-    }
-
-    // Email validation
-    const email = formData.get("user_email") as string;
-    if (!email) {
-      newErrors.email = "Email is required.";
-      isValid = false;
-    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-      newErrors.email = "Invalid email address.";
-      isValid = false;
-    }
-
-    // Message validation
-    if (!formData.get("message")) {
-      newErrors.message = "Message is required.";
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
+  const validatePhone = (phone: string) => {
+    const regex = /^\+?[0-9]{10,15}$/; // Validates international phone numbers
+    return regex.test(phone);
   };
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormStatus("idle");
+  const validateForm = () => {
+    const newErrors = {
+      name: formData.name ? "" : "Имя обязательно.",
+      phone: formData.phone
+        ? validatePhone(formData.phone)
+          ? ""
+          : "Неверный номер телефона."
+        : "Телефон обязателен.",
+      message: formData.message ? "" : "Сообщение обязательно.",
+    };
+    setErrors(newErrors);
+    return !Object.values(newErrors).some((error) => error !== "");
+  };
 
-    const formData = new FormData(formRef.current!);
-    if (!validateForm(formData)) {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) {
       return;
     }
-
     setFormStatus("loading");
 
     emailjs
-      .sendForm(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
-        formRef.current!,
-        "your_user_id" // Replace with your EmailJS user ID
+      .send(
+        "your_service_id", // Замените на ваш EmailJS service ID
+        "your_template_id", // Замените на ваш EmailJS template ID
+        {
+          from_name: formData.name,
+          from_phone: formData.phone,
+          message: formData.message,
+        },
+        "your_user_id" // Замените на ваш EmailJS user ID
       )
       .then(
         () => {
           setFormStatus("success");
-          formRef.current?.reset();
-          setErrors({ name: "", email: "", message: "" });
+          setFormData({ name: "", phone: "", message: "" });
+          setErrors({ name: "", phone: "", message: "" });
+          onSuccess();
         },
-        (error) => {
-          console.error("Failed to send email: ", error);
-          setFormStatus("error");
-        }
+        () => setFormStatus("error")
       );
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
-
-        <form
-          ref={formRef}
-          onSubmit={sendEmail}
-          className="max-w-lg mx-auto space-y-6 bg-card p-6 rounded-lg shadow-lg"
+    <motion.div
+      className="fixed inset-0 flex items-center justify-center h-[100vh] bg-black/70 z-50"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-[92vw] relative">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-primary hover:text-primary/90 text-2xl font-bold"
         >
-          {/* Name Field */}
+          &times;
+        </button>
+        <h3 className="text-3xl font-bold mb-6 text-center text-primary">
+          Оставьте заявку
+        </h3>
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-left text-muted-foreground"
+            >
+              Имя
             </label>
             <input
               type="text"
               id="name"
-              name="user_name"
-              className={`w-full px-4 py-2 rounded-lg border focus:ring-primary focus:border-primary ${
-                errors.name ? "border-red-500" : ""
-              }`}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm bg-white text-gray-800 focus:ring-primary focus:border-primary py-2 px-3"
+              required
             />
-            {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            )}
           </div>
-
-          {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
+            <label
+              htmlFor="phone"
+              className="block text-sm text-left font-medium text-muted-foreground"
+            >
+              Телефон
             </label>
             <input
-              type="email"
-              id="email"
-              name="user_email"
-              className={`w-full px-4 py-2 rounded-lg border focus:ring-primary focus:border-primary ${
-                errors.email ? "border-red-500" : ""
-              }`}
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm bg-white text-gray-800 focus:ring-primary focus:border-primary py-2 px-3"
+              placeholder="+7 (XXX) XXX-XX-XX"
+              required
             />
-            {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+            )}
           </div>
-
-          {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
-              Message
+            <label
+              htmlFor="message"
+              className="block text-sm text-left font-medium text-muted-foreground"
+            >
+              Сообщение
             </label>
             <textarea
               id="message"
               name="message"
-              rows={5}
-              className={`w-full px-4 py-2 rounded-lg border focus:ring-primary focus:border-primary ${
-                errors.message ? "border-red-500" : ""
-              }`}
-            ></textarea>
-            {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message}</p>}
+              value={formData.message}
+              onChange={handleChange}
+              rows={4}
+              className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm bg-white text-gray-800 focus:ring-primary focus:border-primary py-2 px-3"
+              placeholder="Опишите вашу проблему"
+              required
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            )}
           </div>
-
-          {/* Submit Button */}
-          <button
+          <motion.button
             type="submit"
-            className={`w-full px-6 py-3 text-lg font-medium text-white rounded-lg shadow-md ${
-              formStatus === "loading"
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-primary hover:bg-primary/90 transition-all"
-            }`}
-            disabled={formStatus === "loading"}
+            className="w-full bg-primary text-white py-2 rounded-md font-bold hover:bg-primary/90 transition-transform transform hover:scale-105"
           >
-            {formStatus === "loading" ? "Sending..." : "Send Message"}
-          </button>
-
-          {/* Form Status Messages */}
-          {formStatus === "success" && (
-            <p className="text-green-600 text-center mt-4">Message sent successfully!</p>
-          )}
+            {formStatus === "loading"
+              ? "Отправка..."
+              : formStatus === "success"
+              ? "Сообщение отправлено!"
+              : "Отправить"}
+          </motion.button>
           {formStatus === "error" && (
-            <p className="text-red-600 text-center mt-4">Failed to send message. Please try again.</p>
+            <p className="text-red-500 text-sm text-center mt-2">
+              Ошибка при отправке. Пожалуйста, попробуйте еще раз.
+            </p>
           )}
         </form>
       </div>
-    </section>
+    </motion.div>
   );
 };
-
-export default ContactForm;

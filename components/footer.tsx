@@ -1,6 +1,6 @@
 "use client";
 
-import { Blocks } from "lucide-react";
+import { Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,112 +15,109 @@ export function Footer() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
-          className="mb-8  grid grid-cols-1 md:grid-cols-4 gap-8"
+          className="mb-8 grid grid-cols-1 md:grid-cols-4 gap-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-
-         
-          
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-2">
-                <Blocks className="h-8 w-8 text-primary" />
+                <Wrench className="h-8 w-8 text-primary" />
                 <motion.span
                   className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Blockchain FL
+                  Сантехник Тюмень
                 </motion.span>
               </Link>
             </div>
             <p className="text-sm">
-              Empowering businesses with cutting-edge technology solutions.
+              Профессиональные сантехнические услуги с гарантией качества.
             </p>
           </div>
 
-          {/* Layout */}
-              <div>
-                  <h3 className="font-semibold mb-4">Layout</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li>
-                      <Link href="#" className="text-muted-foreground hover:text-primary">
-                      Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#projects" className="text-muted-foreground hover:text-primary">
-                        Projects
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link href="#" className="text-muted-foreground hover:text-primary">
-                        Terms of Service
-                      </Link>
-                    </li> */}
-                    <li>
-                      <a href="mailto:info@blockchainfl.com" className="text-muted-foreground hover:text-primary">
-                        Schedule a Consultation
-                      </a>
-                    </li>
-                  </ul>
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold mb-4">Быстрые ссылки</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/" className="text-muted-foreground hover:text-primary">
+                  Главная
+                </Link>
+              </li>
+              <li>
+                <Link href="services" className="text-muted-foreground hover:text-primary">
+                  Услуги
+                </Link>
+              </li>
+              <li>
+                <Link href="about-us" className="text-muted-foreground hover:text-primary">
+                  О нас
+                </Link>
+              </li>
+              <li>
+                <Link href="contact-us" className="text-muted-foreground hover:text-primary">
+                  Контакты
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4">Услуги</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#services" className="text-muted-foreground hover:text-primary">
-                  Web Application Development
-                </Link> 
-              </li>
-              <li>
-                <Link href="#services" className="text-muted-foreground hover:text-primary">
-                Mobile Application Development 
-                </Link>
-              </li> 
-              <li>
-                <Link href="#services" className="text-muted-foreground hover:text-primary">
-                IT Staffing  
+                <Link href="services" className="text-muted-foreground hover:text-primary">
+                  Устранение протечек
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-muted-foreground hover:text-primary">
-                AI & Automation
+                <Link href="services" className="text-muted-foreground hover:text-primary">
+                  Устранение засоров
                 </Link>
-              </li> 
-            
+              </li>
+              <li>
+                <Link href="services" className="text-muted-foreground hover:text-primary">
+                  Установка сантехники
+                </Link>
+              </li>
+              <li>
+                <Link href="services" className="text-muted-foreground hover:text-primary">
+                  Ремонт сантехники
+                </Link>
+              </li>
             </ul>
           </div>
 
-
-
-          {/* Company */}
+          {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Контакты</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#about" className="text-muted-foreground hover:text-primary">
-                  About us
-                </Link>
+                <a href="tel:+7-XXX-XXX-XX-XX" className="text-muted-foreground hover:text-primary">
+                  +7 (XXX) XXX-XX-XX
+                </a>
               </li>
               <li>
-                <Link href="#about" className="text-muted-foreground hover:text-primary">
-                  Contact us
-                </Link>
+                <a href="mailto:info@santehnik-tyumen.ru" className="text-muted-foreground hover:text-primary">
+                  info@santehnik-tyumen.ru
+                </a>
+              </li>
+              <li>
+                <p className="text-muted-foreground">
+                  Тюмень, ул. Примерная, 123
+                </p>
               </li>
             </ul>
           </div>
-
-       
         </motion.div>
 
-      <hr/>
+        <hr />
 
         {/* Additional Info */}
         <motion.div
@@ -129,19 +126,9 @@ export function Footer() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <div className="flex flex-col md:flex-row items-start justify-evenly mb-4">
-            <p className="text-center md:text-left">
-              We are an E-Verified Company, Sam.gov Registered, Minority Owned Business.
-            </p>
-            <Image
-              src="/images/trademark-logo-sam.svg"
-              alt="Logo sam.government"
-              width={80}
-              height={80}
-              className="rounded-full mt-4 md:mt-0"
-            />
-          </div>
-          <p > &copy; {new Date().getFullYear()} Blockchain FL. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Сантехник Тюмень. Все права защищены.
+          </p>
         </motion.div>
       </div>
     </motion.footer>

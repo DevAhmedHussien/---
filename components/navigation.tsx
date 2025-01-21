@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Menu, X, Blocks } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
+import { FaArrowRight } from "react-icons/fa";
+import { ContactForm } from "./ContactForm";
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [showForm, setShowForm] = useState(false);
+ 
+  const links = [ {en:'services' , ru :'Услуги' },  {en:'about-us' , ru :'O нас' } ,  {en:'contact-us' , ru :'Контакты' }]
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -20,40 +24,39 @@ export function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Blocks className="h-8 w-8 text-primary" />
+              <Wrench className="h-8 w-8 text-primary" />
               <motion.span
                 className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Blockchain FL
+                Сантехник Тюмень
               </motion.span>
             </Link>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            {["services", "process", "projects", "about", "contact"].map((item, index) => (
+            {links.map((item, index) => (
               <motion.div
-                key={item}
+                key={index}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
               >
                 <Link
-                  href={`#${item}`}
-                  className="text-sm hover:text-primary transition-colors"
+                  href={item.en}
+                  className="text-sm hover:text-primary transition-colors text-upper"
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1).replace("-", " ")}
+                  {item.ru}
                 </Link>
               </motion.div>
             ))}
-            <Button asChild>
-              <Link href="#contact">Get Started</Link>
+            <Button asChild onClick={() => setShowForm(true)} >
+              <Link href="">Вызвать сантехника</Link>
             </Button>
           </div>
-   {/* <ModeToggle /> */}
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
@@ -80,23 +83,42 @@ export function Navigation() {
           className="md:hidden bg-background border-b"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {["services", "process", "projects", "about", "contact"].map((item) => (
+            {links.map((item,index) => (
               <Link
-                key={item}
-                href={`#${item}`}
+                key={index}
+                href={item.en}
                 className="block px-3 py-2 text-base hover:text-primary transition-colors"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1).replace("-", " ")}
+                {item.ru}
               </Link>
             ))}
             <div className="px-3 py-2">
               <Button className="w-full" asChild>
-                <Link href="#contact">Get Started</Link>
+              <Button size="lg" asChild>
+              <Link href="" 
+              onClick={() => setShowForm(true)}
+              >
+                Вызвать сантехника <FaArrowRight className="ml-2 h-4 w-4 inline" />
+              </Link>
+            </Button>
               </Button>
             </div>
           </div>
         </motion.div>
+
+        // fom 
       )}
+      {/* form  */}
+
+         {/* Contact Form Popover */}
+       <AnimatePresence>
+         {showForm && (
+           <ContactForm
+             onClose={() => setShowForm(false)}
+             onSuccess={() => setShowForm(false)}
+           />
+         )}
+       </AnimatePresence>
     </motion.nav>
   );
 }

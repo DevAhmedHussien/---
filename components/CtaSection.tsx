@@ -1,26 +1,41 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
+import { ContactForm } from "@/components/ContactForm"; 
+import { AnimatePresence } from "framer-motion";
 
 const CTASection: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-16 text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">
-            Ready to Transform Your IT Infrastructure?
+            Готовы решить ваши сантехнические проблемы?
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
-            Join the growing number of businesses that trust Blockchain FL for
-            their technology needs.
+            Оставьте заявку, и наш мастер приедет к вам в течение 30 минут.
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90" asChild>
-            <Link  href="mailto:info@blockchainfl.com">
-              Schedule a Consultation
-              <FaArrowRight className="ml-2 h-4 w-4 inline" />
-            </Link>
-          </Button>
+            <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-primary hover:bg-white/90"
+                onClick={()=>{setIsOpen(true)}}
+              >
+                Вызвать сантехника
+                <FaArrowRight className="ml-2 h-4 w-4 inline" />
+            </Button>
+            <AnimatePresence >
+              {isOpen && (
+                <ContactForm
+                  onClose={() => setIsOpen(false)}
+                  onSuccess={() => setIsOpen(false)}
+                />
+              )}
+            </AnimatePresence>
         </div>
       </div>
     </section>
@@ -28,4 +43,3 @@ const CTASection: React.FC = () => {
 };
 
 export default CTASection;
-  
