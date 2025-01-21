@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
    
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full flex items-center">
-        <div className="text-center space-y-12" style={{ margin: "0 auto" }}>
+        <div className="text-center space-y-12" style={{ margin: "0 auto" , width:'100%'}}>
           < h1
             className="text-4xl md:text-6xl font-bold tracking-tight"
            
