@@ -1,8 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Navigation } from '@/components/navigation';
-import { Footer } from '@/components/footer';
+import { Navigation } from '../components/navigation';
+import { Footer } from '../components/footer';
 
 const inter = Inter({ 
   subsets: ['latin'], 
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
       }
     ]
   },
-  facebook: {
-    app_id: '123456789012345'  
-  },
-  instagram: {
-    url: 'https://www.instagram.com/ваш-сайт',  
-    title: "Сантехнические услуги в Тюмени",
-    description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.'
-  }
+  // facebook: {
+  //   app_id: '123456789012345'  
+  // },
+  // instagram: {
+  //   url: 'https://www.instagram.com/ваш-сайт',  
+  //   title: "Сантехнические услуги в Тюмени",
+  //   description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.'
+  // }
 };
 
 

@@ -4,9 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Wrench } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa";
 import { ContactForm } from "./ContactForm";
+import { Button } from "./ui/button";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

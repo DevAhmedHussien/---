@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import SocialMedia from "./SocialMedia";
+import { Button } from "./ui/button";
 
 const HeroSection: React.FC = () => {
   return (

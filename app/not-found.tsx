@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
+
 import Link from "next/link";
+import { Button } from "../components/ui/button";
 
 export default function Custom404() {
   return (
@@ -14,17 +15,17 @@ export default function Custom404() {
         backgroundColor: "var(--primary-background)",
       }}
     >
-      <div>
+     <div>
         <h1 style={{ fontSize: "4rem", margin: "0" }}>404</h1>
         <h5 style={{ fontSize: "1.5rem", margin: "1rem 0" }}>
-          Oops! The page you're looking for isn't here.
+          Упс! Страница не найдена
         </h5>
         <p style={{ fontSize: "1rem", marginBottom: "2rem" }}>
-          It looks like the page you are trying to access doesn't exist or has
-          been moved. Please check the URL or head back to our homepage.
+          Похоже, страница, которую вы ищете, не существует или была перемещена. 
+          Пожалуйста, проверьте адрес или вернитесь на главную страницу.
         </p>
         <Button asChild>
-              <Link href="/">Back to Home</Link>
+          <Link href="/">На главную</Link>
         </Button>
       </div>
     </div>

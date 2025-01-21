@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { FaTint, FaTools, FaWrench, FaShower, FaToilet, FaBath, FaUserCog } from "react-icons/fa";
-import CTASection from "@/components/CtaSection";
+import CTASection from "../../components/CtaSection";
 
 interface Service {
   icon: JSX.Element;

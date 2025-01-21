@@ -7,8 +7,8 @@ import {
   Wallet,        
   CheckCircle    
 } from "lucide-react";
-import CTASection from "@/components/CtaSection";
 import { Metadata } from "next";
+import CTASection from "../../components/CtaSection";
 
 // Metadata Configuration
 export const metadata: Metadata = {

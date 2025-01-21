@@ -1,11 +1,11 @@
-import CTASection from "@/components/CtaSection";
-import ServicesSection from "@/components/ServicesSection";
-import HeroSection from "@/components/HeroSection";
-import WorkProcessSection from "@/components/WorkProcessSection";
-import AboutUs from "@/components/about/page";
-import { WorkExperience } from "@/components/WorkExperience";
-import { RecentWorks } from "@/components/RecentWorks";
-import { Contact } from "@/components/contact/page";
+import CTASection from "../components/CtaSection";
+import HeroSection from "../components/HeroSection";
+import { RecentWorks } from "../components/RecentWorks";
+import ServicesSection from "../components/ServicesSection";
+import { WorkExperience } from "../components/WorkExperience";
+import WorkProcessSection from "../components/WorkProcessSection";
+import AboutUs from "../components/about/page";
+import { Contact } from "../components/contact/page";
 
 
 export default function Home() {

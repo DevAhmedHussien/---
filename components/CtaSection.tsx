@@ -1,10 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa";
 import React, { useState } from "react";
-import { ContactForm } from "@/components/ContactForm"; 
 import { AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
+import { ContactForm } from "./ContactForm";
 
 const CTASection: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
