@@ -29,25 +29,25 @@ const solutions = [
 const Solutions: React.FC = () => {
   return (
     <section className="py-20 bg-background flex items-center justify-center">
-      <motion.div
+      < div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <div className="text-center mb-16">
-          <motion.h1
+          < h1
             className="text-4xl font-bold mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
             Our Solutions
-          </motion.h1>
+          </ h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((solution, index) => (
-            <motion.div
+            < div
               key={index}
               className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center"
               initial={{ opacity: 0, y: 50 }}
@@ -62,10 +62,10 @@ const Solutions: React.FC = () => {
               />
               <h2 className="text-2xl font-semibold mb-2">{solution.title}</h2>
               <p className="text-muted-foreground">{solution.description}</p>
-            </motion.div>
+            </ div>
           ))}
         </div>
-      </motion.div>
+      </ div>
     </section>
   );
 };

@@ -14,10 +14,7 @@ export function Navigation() {
  
   const links = [ {en:'services' , ru :'Услуги' },  {en:'about-us' , ru :'O нас' } ,  {en:'contact-us' , ru :'Контакты' }]
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 80 }}
+    < nav
       className="border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,25 +22,20 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Wrench className="h-8 w-8 text-primary" />
-              <motion.span
+              < span
                 className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
+               
               >
                 Сантехник Тюмень
-              </motion.span>
+              </ span>
             </Link>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             {links.map((item, index) => (
-              <motion.div
+              < div
                 key={index}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1 }}
               >
                 <Link
                   href={item.en}
@@ -51,7 +43,7 @@ export function Navigation() {
                 >
                   {item.ru}
                 </Link>
-              </motion.div>
+              </ div>
             ))}
             <Button asChild onClick={() => setShowForm(true)} >
               <Link href="">Вызвать сантехника</Link>
@@ -76,10 +68,7 @@ export function Navigation() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          transition={{ duration: 0.3 }}
+        < div
           className="md:hidden bg-background border-b"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -104,7 +93,7 @@ export function Navigation() {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </ div>
 
         // fom 
       )}
@@ -119,6 +108,6 @@ export function Navigation() {
            />
          )}
        </AnimatePresence>
-    </motion.nav>
+    </ nav>
   );
 }

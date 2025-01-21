@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+
   title: {
     default: "Вызов сантехника на дом в Тюмени | Быстрый ремонт за 30 минут",
     template: "%s | Сантехнические услуги в Тюмени"
@@ -42,15 +43,17 @@ export const metadata: Metadata = {
       }
     ]
   },
-  // facebook: {
-  //   app_id: '123456789012345'  
-  // },
-  // instagram: {
-  //   url: 'https://www.instagram.com/ваш-сайт',  
-  //   title: "Сантехнические услуги в Тюмени",
-  //   description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.'
-  // }
+  facebook: {
+    app_id: '123456789012345'  
+  },
+  instagram: {
+    url: 'https://www.instagram.com/ваш-сайт',  
+    title: "Сантехнические услуги в Тюмени",
+    description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.'
+  }
 };
+
+
 
 export default function RootLayout({
   children,

@@ -1,38 +1,28 @@
-"use client";
 
 import { Wrench } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export function Footer() {
   return (
-    <motion.footer
+    < footer
       className="border-t bg-background"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+     
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
+        < div
           className="mb-8 grid grid-cols-1 md:grid-cols-4 gap-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
         >
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-2">
                 <Wrench className="h-8 w-8 text-primary" />
-                <motion.span
+                < span
                   className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
+                  
                 >
                   Сантехник Тюмень
-                </motion.span>
+                </ span>
               </Link>
             </div>
             <p className="text-sm">
@@ -62,6 +52,16 @@ export function Footer() {
               <li>
                 <Link href="contact-us" className="text-muted-foreground hover:text-primary">
                   Контакты
+                </Link>
+              </li>
+              <li>
+                <Link href="privacy-policy" className="text-muted-foreground hover:text-primary">
+                Политика конфиденциальности
+                </Link>
+              </li>
+              <li>
+                <Link href="terms-services" className="text-muted-foreground hover:text-primary">
+                Пользовательское соглашение
                 </Link>
               </li>
             </ul>
@@ -115,22 +115,19 @@ export function Footer() {
               </li>
             </ul>
           </div>
-        </motion.div>
+        </ div>
 
         <hr />
 
         {/* Additional Info */}
-        <motion.div
+        < div
           className="pt-8 text-center text-sm space-y-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
         >
           <p>
             &copy; {new Date().getFullYear()} Сантехник Тюмень. Все права защищены.
           </p>
-        </motion.div>
+        </ div>
       </div>
-    </motion.footer>
+    </ footer>
   );
 }

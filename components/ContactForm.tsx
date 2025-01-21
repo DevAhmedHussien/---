@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
 interface ContactFormProps {
@@ -78,7 +77,7 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
   };
 
   return (
-    <motion.div
+    < div
       className="fixed inset-0 flex items-center justify-center h-[100vh] bg-black/70 z-50"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -158,7 +157,7 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
             )}
           </div>
-          <motion.button
+          < button
             type="submit"
             className="w-full bg-primary text-white py-2 rounded-md font-bold hover:bg-primary/90 transition-transform transform hover:scale-105"
           >
@@ -167,7 +166,7 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
               : formStatus === "success"
               ? "Сообщение отправлено!"
               : "Отправить"}
-          </motion.button>
+          </ button>
           {formStatus === "error" && (
             <p className="text-red-500 text-sm text-center mt-2">
               Ошибка при отправке. Пожалуйста, попробуйте еще раз.
@@ -175,6 +174,6 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
           )}
         </form>
       </div>
-    </motion.div>
+    </ div>
   );
 };

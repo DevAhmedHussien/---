@@ -1,69 +1,55 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
+
 
 const processes = [
   {
     title: "1. Заявка",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
+    image: "/images/form.png",
     description: "Вы звоните нам по телефону +7 (999) 366-82-22 или оставляете заявку на сайте.",
   },
   {
     title: "2. Уточнение заказа",
-    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    image: "/images/pay.png", 
     description: "Мы уточняем объем работ, удобное время приезда мастера и необходимость покупки материалов.",
   },
   {
     title: "3. Выезд мастера",
-    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    image: "/images/sure.png",
     description: "Мастер приезжает в оговоренное время, без опоздания, со всем необходимым.",
   },
   {
     title: "4. Осмотр и выполнение работы",
-    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    image: "/images/osmotr.png",
     description: "Мастер осматривает объект, называет финальную цену и выполняет работу после вашего согласия.",
   },
   {
     title: "5. Оплата",
-    image: "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?w=800&q=80",
+    image: "/images/fix.png",
     description: "Вы принимаете работу и оплачиваете ее наличными или переводом на карту мастера.",
   },
 ];
-
 const WorkProcessSection: React.FC = () => {
   return (
     <section className="py-20" id="процесс">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <motion.h2
+          < h2
             className="text-4xl font-bold mb-4 text-gray-800"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+           
           >
             Как мы работаем
-          </motion.h2>
-          <motion.p
+          </ h2>
+          < p
             className="text-gray-600 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
           >
             Простой и прозрачный процесс работы с гарантией качества и удобной оплатой.
-          </motion.p>
+          </ p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {processes.map((process, index) => (
-            <motion.div
+            < div
               key={index}
               className="relative group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border hover:border-primary text-left"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="relative">
                 <Image
@@ -81,7 +67,7 @@ const WorkProcessSection: React.FC = () => {
                 </h3>
                 <p className="text-muted-foreground">{process.description}</p>
               </div>
-            </motion.div>
+            </ div>
           ))}
         </div>
       </div>

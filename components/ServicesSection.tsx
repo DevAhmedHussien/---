@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-import { motion } from "framer-motion";
 import {
   FaWrench,
   FaTint,
@@ -52,54 +48,42 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <motion.section
+    < section
       id="услуги"
       className="py-20 min-h-[85vh]"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 1 }}
+     
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <motion.h2
+          < h2
             className="text-3xl font-bold mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 1 }}
+           
           >
             Чем мы можем помочь
-          </motion.h2>
-          <motion.p
+          </ h2>
+          < p
             className="text-muted-foreground max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 1 }}
+            
           >
             Профессиональные сантехнические услуги в Тюмени с гарантией качества.
-          </motion.p>
+          </ p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-20">
           {services.map((service, index) => (
-            <motion.div
+            < div
               key={index}
               className="bg-card p-6 rounded-lg shadow-sm border hover:shadow-xl transition-shadow border hover:border-primary text-left"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 1 }}
+          
             >
               {service.icon}
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-muted-foreground mb-4">{service.description}</p>
               <p className="text-lg font-bold text-primary">{service.price}</p>
-            </motion.div>
+            </ div>
           ))}
         </div>
       </div>
-    </motion.section>
+    </ section>
   );
 };
 
