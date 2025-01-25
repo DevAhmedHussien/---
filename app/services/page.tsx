@@ -1,5 +1,11 @@
 import { Metadata } from "next";
-import { FaTint, FaTools, FaWrench, FaShower, FaToilet, FaBath, FaUserCog } from "react-icons/fa";
+import { FaTint,  FaWrench, FaShower,  FaBath, FaUserCog ,FaToilet,
+  FaTools,  FaPlug,
+  FaLightbulb,
+  FaBolt,
+  FaCar,
+  FaFire,
+  FaCogs } from "react-icons/fa";
 import CTASection from "../../components/CtaSection";
 
 interface Service {
@@ -88,6 +94,41 @@ const services: Service[] = [
     title: "Ремонт сантехники",
     description: "Ремонт и замена сантехнического оборудования любой сложности.",
     price: "от 1 500 ₽",
+  }, {
+    icon: <FaPlug className="h-12 w-12 mb-4 text-primary" />,
+    title: "Ремонт электропроводки",
+    description: "Диагностика и ремонт электропроводки в квартирах и домах.",
+    price: "от 2 500 ₽",
+  },
+  {
+    icon: <FaLightbulb className="h-12 w-12 mb-4 text-primary" />,
+    title: "Установка светильников",
+    description: "Монтаж потолочных, настенных и точечных светильников.",
+    price: "от 1 500 ₽",
+  },
+  {
+    icon: <FaBolt className="h-12 w-12 mb-4 text-primary" />,
+    title: "Замена электрощитка",
+    description: "Установка и модернизация распределительных щитов.",
+    price: "от 3 800 ₽",
+  },
+  {
+    icon: <FaCar className="h-12 w-12 mb-4 text-primary" />,
+    title: "Установка розеток",
+    description: "Монтаж силовых розеток для бытовой техники и электроплит.",
+    price: "от 900 ₽",
+  },
+  {
+    icon: <FaFire className="h-12 w-12 mb-4 text-primary" />,
+    title: "Подключение варочных панелей",
+    description: "Профессиональное подключение варочных поверхностей и духовых шкафов.",
+    price: "от 2 200 ₽",
+  },
+  {
+    icon: <FaCogs className="h-12 w-12 mb-4 text-primary" />,
+    title: "Монтаж электросчетчиков",
+    description: "Установка и поверка однофазных и трехфазных счетчиков.",
+    price: "от 4 000 ₽",
   },
   {
     icon: <FaUserCog className="h-12 w-12 mb-4 text-primary" />,

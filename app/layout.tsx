@@ -75,7 +75,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Тюмень" />
         <meta name="robots" content="index, follow" />
       </head>
-      <body className={`${inter.className}` } > 
+      <body className={inter.className} > 
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
