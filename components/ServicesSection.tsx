@@ -12,7 +12,7 @@ import {
   FaCogs
 } from "react-icons/fa";
 
-const services : Service[] = [
+const services  = [
   {
     icon: <FaTint className="h-12 w-12 mb-4 text-primary" />,
     title: "Устранение протечек",

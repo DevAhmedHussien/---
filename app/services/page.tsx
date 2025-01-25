@@ -29,11 +29,11 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://ваш-сайт.ру/services",
+    url: "https://santikhink-electric.ru/services",
     title: "Услуги | Сантехник Тюмень",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
     images: [{
-      url: "https://ваш-сайт.ру/images/services-plumber.jpg",
+      url: "https://santikhink-electric.ru/images/services-plumber.jpg",
       width: 1200,
       height: 630,
       alt: "Наши сантехнические услуги в Тюмени",
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Услуги | Сантехник Тюмень",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
-    images: ["https://ваш-сайт.ру/images/services-plumber.jpg"],
+    images: ["https://santikhink-electric.ru/images/services-plumber.jpg"],
   },
   alternates: {
-    canonical: "https://ваш-сайт.ру/services",
+    canonical: "https://santikhink-electric.ru/services",
   },
-  authors: [{ name: "Сантехник Тюмень", url: "https://ваш-сайт.ру" }],
+  authors: [{ name: "Сантехник Тюмень", url: "https://santikhink-electric.ru" }],
   robots: "index, follow",
-  metadataBase: new URL("https://ваш-сайт.ру"),
+  metadataBase: new URL("https://santikhink-electric.ru"),
   other: {
     "geo.region": "RU-TYU",
     "geo.placename": "Тюмень",

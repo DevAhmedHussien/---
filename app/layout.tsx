@@ -26,17 +26,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Вызов сантехника на дом в Тюмени | Быстрый ремонт за 30 минут",
     description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.',
-    // image: 'https://ваш-сайт.ру/opengraph-image.png', 
+    image: 'https://santikhink-electric.ru/opengraph-image.png', 
     site: '@ваш-сайт'  
   },
   openGraph: {
     title: "Вызов сантехника на дом в Тюмени | Быстрый ремонт за 30 минут",
     description: 'Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам. Оплата наличными или картой.',
-    url: 'https://ваш-сайт.ру', 
+    url: 'https://santikhink-electric.ru',  
     type: 'website',
     images: [
       {
-        url: 'https://ваш-сайт.ру/opengraph-image.png',  
+        url: 'https://santikhink-electric.ru/opengraph-image.png',  
         width: 1200,
         height: 630,
         alt: 'Вызов сантехника на дом в Тюмени'
@@ -69,7 +69,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#4169E1" />
         {/* Canonical URL */}
-        <link rel="canonical" href="https://ваш-сайт.ру" />
+        <link rel="canonical" href="https://santikhink-electric.ru" />
         {/* Additional Meta Tags for Local SEO */}
         <meta name="geo.region" content="RU-TYU" />
         <meta name="geo.placename" content="Тюмень" />
