@@ -110,6 +110,7 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
               type="text"
               id="name"
               name="name"
+              placeholder="IVANOV IVAN"
               value={formData.name}
               onChange={handleChange}
               className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm bg-white text-gray-800 focus:ring-primary focus:border-primary py-2 px-3"
@@ -138,7 +139,7 @@ export const ContactForm = ({ onClose, onSuccess }: ContactFormProps) => {
               value={formData.phone}
               onChange={handleChange}
               className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm bg-white text-gray-800 focus:ring-primary focus:border-primary py-2 px-3"
-              placeholder="+7 () XXX-XX-XX"
+              placeholder="+7 (XXX) XXX-XX-XX"
               pattern="^(\+7|8)[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$"
               aria-invalid={!!errors.phone}
               aria-describedby="phone-error"
