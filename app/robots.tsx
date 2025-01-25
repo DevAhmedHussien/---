@@ -2,6 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
+  const SITE_URL = 'https://santikhink-electric.ru/'
   return {
     rules: {
       userAgent: '*',
@@ -9,9 +10,9 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ['/private/', '/admin/'],
     },
     sitemap: [
-      `${process.env.SITE_URL}/sitemap.xml`,
-      `${process.env.SITE_URL}/sitemap-services.xml`
+      `${SITE_URL}/sitemap.xml`,
+      `${SITE_URL}/sitemap-services.xml`
     ],
-    host: process.env.SITE_URL,
+    host: SITE_URL,
   }
 }
