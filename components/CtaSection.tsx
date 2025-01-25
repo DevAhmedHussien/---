@@ -25,7 +25,7 @@ const CTASection: React.FC = () => {
                 className="bg-white text-primary hover:bg-white/90"
                 onClick={()=>{setIsOpen(true)}}
               >
-                Вызвать сантехника
+                Вызвать сантехника 
                 <FaArrowRight className="ml-2 h-4 w-4 inline" />
             </Button>
             <AnimatePresence >
