@@ -77,8 +77,8 @@ export default function ContactUsPage() {
                   <div>
                     <h3 className="text-xl font-semibold">Телефон</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+71234567890" className="hover:text-primary">
-                        +7 (123) 456-78-90
+                      <a href="tel:+79091818242" className="hover:text-primary">
+                        +7 (909) 181-82-42
                       </a>
                     </p>
                   </div>
@@ -90,8 +90,8 @@ export default function ContactUsPage() {
                   <div>
                     <h3 className="text-xl font-semibold">Электронная почта</h3>
                     <p className="text-muted-foreground">
-                      <a href="mailto:info@santehnik-tyumen.ru" className="hover:text-primary">
-                        info@santehnik-tyumen.ru
+                      <a href="mailto:vash72dom@gmail.com" className="hover:text-primary">
+                        vash72dom@gmail.com
                       </a>
                     </p>
                   </div>

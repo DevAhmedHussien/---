@@ -57,8 +57,8 @@ export const metadata = {
   
         <p className="mt-8">
           По вопросам обработки данных обращайтесь: <br />
-          Телефон: +7 (3452) 123-45-67 <br />
-          Email: info@santehnik-tyumen.ru
+          Телефон: +7 (909) 181-82-42 <br />
+          Email: vash72dom@gmail.com
         </p>
       </section>
     )

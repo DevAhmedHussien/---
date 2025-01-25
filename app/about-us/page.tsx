@@ -108,7 +108,7 @@ export default function AboutUsPage() {
             />
           </div>
         </div>
-
+{/* 
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-8">Наша команда</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -130,19 +130,19 @@ export default function AboutUsPage() {
             <div className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border hover:border-primary text-center">
               <Image
                 src="/images/recent/two.png"
-                alt="Артур"
+                alt="Артём"
                 width={150}
                 height={150}
                 className="rounded-full mx-auto mb-4"
               />
-              <h3 className="text-2xl font-semibold mb-2">Артур</h3>
+              <h3 className="text-2xl font-semibold mb-2">Артём</h3>
               <p className="text-muted-foreground">Руководитель бригады мастеров</p>
               <p className="text-sm text-muted-foreground mt-4">
-                Артур отвечает за координацию работы мастеров и обеспечение высокого качества выполнения заказов. Он гарантирует, что каждый клиент получает профессиональный и своевременный сервис.
+                Артём отвечает за координацию работы мастеров и обеспечение высокого качества выполнения заказов. Он гарантирует, что каждый клиент получает профессиональный и своевременный сервис.
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <CTASection />
       </div>

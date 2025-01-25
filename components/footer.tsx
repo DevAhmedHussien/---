@@ -21,7 +21,7 @@ export function Footer() {
                   className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                   
                 >
-                  Сантехник Тюмень
+                   Сантехник & Электрик 
                 </ span>
               </Link>
             </div>
@@ -99,13 +99,14 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Контакты</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+7-XXX-XXX-XX-XX" className="text-muted-foreground hover:text-primary">
-                  +7 (XXX) XXX-XX-XX
+                <a href="tel:+79091818242" className="text-muted-foreground hover:text-primary">
+                +7 (909) 181-82-42
+               
                 </a>
               </li>
               <li>
-                <a href="mailto:info@santehnik-tyumen.ru" className="text-muted-foreground hover:text-primary">
-                  info@santehnik-tyumen.ru
+                <a href="mailto:vash72dom@gmail.com" className="text-muted-foreground hover:text-primary">
+                  vash72dom@gmail.com
                 </a>
               </li>
               <li>

@@ -26,7 +26,7 @@ export function Navigation() {
                 className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                
               >
-                Сантехник Тюмень
+                Сантехник & Электрик 
               </ span>
             </Link>
           </div>

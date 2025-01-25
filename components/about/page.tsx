@@ -36,6 +36,7 @@ export default function AboutUs() {
               width={150}
               height={150}
               className="rounded-full mx-auto mb-4"
+              style={{maxHeight:'199px'}}
             />
             <h2 className="text-2xl font-semibold mb-4">Сергей</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -54,19 +55,19 @@ export default function AboutUs() {
             transition={{ duration: 0.3 }}
           >
             <Image
-              src="/images/artur.jpeg" // Replace with the actual image path
+              src="/images/artem.jpeg" // Replace with the actual image path
               alt="Артур"
               width={150}
               height={150}
               className="rounded-full mx-auto mb-4"
             />
-            <h2 className="text-2xl font-semibold mb-4">Артур</h2>
+            <h2 className="text-2xl font-semibold mb-4">Артём</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Руководитель бригады мастеров. Артур отвечает за координацию работы мастеров и обеспечение высокого качества выполнения заказов.
+              Руководитель бригады мастеров. Артём отвечает за координацию работы мастеров и обеспечение высокого качества выполнения заказов.
             </p>
             <Users className="h-12 w-12 text-secondary mx-auto mb-2" />
             <p className="text-muted-foreground">
-              Артур гарантирует, что каждый клиент получает профессиональный и своевременный сервис.
+            Артём гарантирует, что каждый клиент получает профессиональный и своевременный сервис.
             </p>
           </ div>
         </ div>

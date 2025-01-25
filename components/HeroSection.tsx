@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
             className="text-4xl md:text-6xl font-bold tracking-tight"
            
           >
-            Вызов сантехника на дом в{" "}
+            Вызов сантехника - электрика на дом в{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Тюмени
             </span>
