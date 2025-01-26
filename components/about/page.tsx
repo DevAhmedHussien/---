@@ -31,12 +31,12 @@ export default function AboutUs() {
           
           >
             <Image
-              src="/images/sergey.jpeg" // Replace with the actual image path
+              src="/images/sergey.png" // Replace with the actual image path
               alt="Сергей"
               width={150}
               height={150}
               className="rounded-full mx-auto mb-4"
-              style={{maxHeight:'199px'}}
+              // style={{maxHeight:'199px'}}
             />
             <h2 className="text-2xl font-semibold mb-4">Сергей</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -52,10 +52,9 @@ export default function AboutUs() {
           < div
             className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border hover:border-primary text-center"
             whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.3 }}
           >
             <Image
-              src="/images/artem.jpeg" // Replace with the actual image path
+              src="/images/artem.png" // Replace with the actual image path
               alt="Артур"
               width={150}
               height={150}
