@@ -125,7 +125,7 @@ export function Footer() {
           className="pt-8 text-center text-sm space-y-4"
         >
           <p>
-            &copy; {new Date().getFullYear()} Сантехник Тюмень. Все права защищены.
+            &copy; {new Date().getFullYear()} Сантехник & Электрик Тюмень, Все права защищены.
           </p>
         </ div>
       </div>

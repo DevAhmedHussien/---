@@ -12,7 +12,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
  
-  const links = [ {en:'services' , ru :'Услуги' },  {en:'about-us' , ru :'O нас' } ,  {en:'contact-us' , ru :'Контакты' }]
+  const links = [ {en:'services' , ru :'Услуги' },  {en:'about-us' , ru :'O нас' } ,  {en:'contact-us' , ru :'Контакты' } , {en : 'faq' , ru:'Вопросы'}]
   return (
     < nav
       className="border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50"

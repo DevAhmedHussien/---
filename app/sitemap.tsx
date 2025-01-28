@@ -3,7 +3,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://santikhink-electric.ru/' // Replace with your domain
+  const baseUrl = 'https://santikhink-electric.online/' // Replace with your domain
 
   return [
     {
@@ -26,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/contact-us`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

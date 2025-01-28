@@ -16,11 +16,12 @@ interface Service {
 }
 
 export const metadata: Metadata = {
-  title: "Услуги | Сантехник Тюмень",
+  title: "Услуги | Сантехник & Электрик Тюмень ",
   description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
   keywords: [
     "сантехнические услуги Тюмень",
-    "устранение протечек Тюмень",
+    "устранение протечек Тюмень","сантехнические услуги Тюмень","Электрик ",
+    "вызов сантехника",'Сантехник & Электрик ', "Электрик Тюмень " ,"Сантехник Тюмень",
     "устранение засоров Тюмень",
     "ремонт сантехники Тюмень",
     "установка сантехники Тюмень",
@@ -29,11 +30,11 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://santikhink-electric.ru/services",
+    url: "https://santikhink-electric.online/services",
     title: "Услуги | Сантехник Тюмень",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
     images: [{
-      url: "https://santikhink-electric.ru/images/services-plumber.jpg",
+      url: "https://santikhink-electric.online/images/services-plumber.jpg",
       width: 1200,
       height: 630,
       alt: "Наши сантехнические услуги в Тюмени",
@@ -44,14 +45,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Услуги | Сантехник Тюмень",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
-    images: ["https://santikhink-electric.ru/images/services-plumber.jpg"],
+    images: ["https://santikhink-electric.online/images/services-plumber.jpg"],
   },
   alternates: {
-    canonical: "https://santikhink-electric.ru/services",
+    canonical: "https://santikhink-electric.online/services",
   },
-  authors: [{ name: "Сантехник Тюмень", url: "https://santikhink-electric.ru" }],
+  authors: [{ name: "Сантехник Тюмень", url: "https://santikhink-electric.online/services" }],
   robots: "index, follow",
-  metadataBase: new URL("https://santikhink-electric.ru"),
+  metadataBase: new URL("https://santikhink-electric.online/services"),
   other: {
     "geo.region": "RU-TYU",
     "geo.placename": "Тюмень",
