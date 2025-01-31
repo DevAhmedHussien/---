@@ -108,41 +108,6 @@ export default function AboutUsPage() {
             />
           </div>
         </div>
-{/* 
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-8">Наша команда</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border hover:border-primary text-center">
-              <Image
-                src="/images/recent/one.png"
-                alt="Сергей"
-                width={150}
-                height={150}
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-2xl font-semibold mb-2">Сергей</h3>
-              <p className="text-muted-foreground">Генеральный директор</p>
-              <p className="text-sm text-muted-foreground mt-4">
-                Сергей обладает многолетним опытом в сфере сантехнических услуг и управления бизнесом. Его стратегическое видение обеспечивает высокое качество услуг и удовлетворенность клиентов.
-              </p>
-            </div>
-
-            <div className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border hover:border-primary text-center">
-              <Image
-                src="/images/recent/two.png"
-                alt="Артём"
-                width={150}
-                height={150}
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-2xl font-semibold mb-2">Артём</h3>
-              <p className="text-muted-foreground">Руководитель бригады мастеров</p>
-              <p className="text-sm text-muted-foreground mt-4">
-                Артём отвечает за координацию работы мастеров и обеспечение высокого качества выполнения заказов. Он гарантирует, что каждый клиент получает профессиональный и своевременный сервис.
-              </p>
-            </div>
-          </div>
-        </div> */}
 
         <CTASection />
       </div>
