@@ -32,6 +32,7 @@ export function WorkExperience() {
           ))}
         </div>
       </div>
+      
     </section>
   );
 }

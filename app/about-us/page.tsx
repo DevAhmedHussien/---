@@ -12,11 +12,11 @@ import CTASection from "../../components/CtaSection";
 
 // Metadata Configuration
 export const metadata: Metadata = {
-  title: "О нашей компании | Сантехник & Электрик Тюмень",
-  description: " Сантехник & Электрик Тюмень — профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества.",
+  title: "О нашей компании | Сантехник и Электрик Тюмень",
+  description: " Сантехник и Электрик Тюмень — профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества.",
   keywords: [
     "сантехнические услуги Тюмень","Электрик ",
-    "вызов сантехника",'Сантехник & Электрик ', "Электрик Тюмень " ,"Сантехник Тюмень",
+    "вызов сантехника",'Сантехник и Электрик ', "Электрик Тюмень " ,"Сантехник Тюмень",
     "устранение протечек",
     "ремонт сантехники",
     "установка сантехники",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     "сантехнические работы",
     "сантехник круглосуточно",
   ],
-  authors: [{ name: "Сантехник & Электрик Тюмень " }],
+  authors: [{ name: "Сантехник и Электрик Тюмень " }],
   metadataBase: new URL("https://santikhink-electric.online/about-us"),
   openGraph: {
     type: "website",
     url: "/about",
-    title: "О нашей компании | Сантехник & Электрик Тюмень ",
-    description: "ССантехник & Электрик Тюмень  — профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества.",
+    title: "О нашей компании | Сантехник и Электрик Тюмень ",
+    description: "Сантехник и Электрик Тюмень  — профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества.",
     images: [{
       url: "/opengraph-image.png", // Automatically handles OG image
       width: 1200,
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
 
         <div className="text-center mb-16">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Сантехник Тюмень — это команда профессионалов, предоставляющая качественные сантехнические услуги в Тюмени и области. Мы специализируемся на устранении протечек, засоров, установке и ремонте сантехники.
+          Сантехник и Электрик Тюмень — это команда профессионалов, предоставляющая качественные сантехнические услуги в Тюмени и области. Мы специализируемся на устранении протечек, засоров, установке и ремонте сантехники.
           </p>
         </div>
 
@@ -69,33 +69,25 @@ export default function AboutUsPage() {
             <p className="text-muted-foreground">
               Мы стремимся сделать жизнь наших клиентов комфортной, предоставляя быстрые, надежные и профессиональные сантехнические услуги. Наша цель — решить ваши проблемы с сантехникой в кратчайшие сроки.
             </p>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-4">
-                  <Wrench className="h-6 w-6 text-primary" />
-                  <span>Быстрый выезд мастера в течение 30 минут</span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <Shield className="h-6 w-6 text-primary" />
-                  <span>Гарантия на все виды работ</span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <Users className="h-6 w-6 text-primary" />
-                  <span>Опытные и квалифицированные мастера</span>
-                </li>
-                {/* New additional items */}
-                <li className="flex items-center space-x-4">
-                  <Clock className="h-6 w-6 text-primary" /> {/* Add Clock icon import */}
-                  <span>Круглосуточная служба поддержки</span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <Wallet className="h-6 w-6 text-primary" /> {/* Add Wallet icon import */}
-                  <span>Фиксированные цены без скрытых платежей</span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <CheckCircle className="h-6 w-6 text-primary" /> {/* Add CheckCircle icon import */}
-                  <span>Использование профессионального оборудования</span>
-                </li>
-            </ul>
+            <ul className="space-y-4">
+                {[
+                  {icon: Wrench, text: "Быстрый выезд мастера в течение 30 минут", prop: "actionableFeedbackPolicy"},
+                  {icon: Shield, text: "Гарантия 2 года на все работы", prop: "serviceWarranty"},
+                  {icon: Users, text: "Опытные мастера с допусками СРО", prop: "employee"},
+                  {icon: Clock, text: "Круглосуточная служба поддержки", prop: "openingHours"},
+                  {icon: Wallet, text: "Фиксированные цены без скрытых платежей", prop: "priceRange"},
+                  {icon: CheckCircle, text: "Сертифицированное оборудование", prop: "itemReviewed"}
+                ].map((item, index) => (
+                  <li 
+                    key={index} 
+                    className="flex items-center space-x-4"
+                    itemProp={item.prop}
+                  >
+                    <item.icon className="h-6 w-6 text-primary" />
+                    <span itemProp="description">{item.text}</span>
+                  </li>
+                ))}
+                </ul>
           </div>
           
           <div className="relative h-220" style={{height:"600px"}}>

@@ -14,18 +14,13 @@ export function Navigation() {
  
   const links = [ {en:'services' , ru :'Услуги' },  {en:'about-us' , ru :'O нас' } ,  {en:'contact-us' , ru :'Контакты' } , {en : 'faq' , ru:'Вопросы'}]
   return (
-    < nav
-      className="border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50"
-    >
+    < nav className="border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50"  >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Wrench className="h-8 w-8 text-primary" />
-              < span
-                className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-               
-              >
+              < span className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"  >
                 {/* Тюмень */}
                 Сантехник & Электрик 
               </ span>
@@ -35,13 +30,10 @@ export function Navigation() {
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             {links.map((item, index) => (
-              < div
-                key={index}
-              >
+              < div key={index} >
                 <Link
                   href={item.en}
-                  className="text-sm hover:text-primary transition-colors text-upper"
-                >
+                  className="text-sm hover:text-primary transition-colors text-upper"  >
                   {item.ru}
                 </Link>
               </ div>

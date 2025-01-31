@@ -21,7 +21,7 @@ export function Footer() {
                   className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                   
                 >
-                   Сантехник & Электрик 
+                   Сантехник и Электрик 
                 </ span>
               </Link>
             </div>
@@ -125,7 +125,7 @@ export function Footer() {
           className="pt-8 text-center text-sm space-y-4"
         >
           <p>
-            &copy; {new Date().getFullYear()} Сантехник & Электрик Тюмень, Все права защищены.
+            иcopy; {new Date().getFullYear()} Сантехник и Электрик Тюмень, Все права защищены.
           </p>
         </ div>
       </div>
