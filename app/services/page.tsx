@@ -7,6 +7,8 @@ import { FaTint,  FaWrench, FaShower,  FaBath, FaUserCog ,FaToilet,
   FaFire,
   FaCogs } from "react-icons/fa";
 import CTASection from "../../components/CtaSection";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import FAQSection from "../faq/FAQSection";
 
 interface Service {
   icon: JSX.Element;
@@ -16,43 +18,47 @@ interface Service {
 }
 
 export const metadata: Metadata = {
-  title: "Услуги | Сантехник и Электрик Тюмень ",
+  title: "Услуги | Сантехник и Электрик на дом в Тюмени ",
   description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
   keywords: [
-    "сантехнические услуги Тюмень",
+    "сантехнические услуги Тюмень", "Вызов сантехника и электрика на дом в Тюмени",
     "устранение протечек Тюмень","сантехнические услуги Тюмень","Электрик ",
-    "вызов сантехника",'Сантехник и Электрик ', "Электрик Тюмень " ,"Сантехник Тюмень",
+    "вызов сантехника",'Сантехник и Электрик ', "Электрик Тюмень " ,"Сантехник и Электрик на дом в Тюмени ",
     "устранение засоров Тюмень",
     "ремонт сантехники Тюмень",
     "установка сантехники Тюмень",
     "аренда сантехника Тюмень",
-    "вызов сантехника Тюмень",
+    "вызов сантехника Тюмень",'Устранение протечек',
+  'Установка смесителей',
+   'Ремонт душевой кабины',
+   'Ремонт сантехники',
+  'Ремонт электропроводки',
+    'Установка светильников',
+   'Замена электрощитка',
+    'Установка розеток',
+   'Подключение варочных панелей',
+    'Монтаж электросчетчиков',
+  'Аренда сантехника',
   ],
   openGraph: {
     type: "website",
-    url: "https://santikhink-electric.online/services",
-    title: "Услуги | Сантехник Тюмень",
+    url: "https://www.santikhink-electric.online/services",
+    title: "Услуги | Сантехник и Электрик на дом в Тюмени ",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
     images: [{
-      url: "https://santikhink-electric.online/images/services-plumber.jpg",
+      url: "https://www.santikhink-electric.online/images/services-plumber.jpg",
       width: 1200,
       height: 630,
       alt: "Наши сантехнические услуги в Тюмени",
     }],
-    siteName: "Сантехник Тюмень",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Услуги | Сантехник Тюмень",
-    description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
-    images: ["https://santikhink-electric.online/images/services-plumber.jpg"],
+    siteName: "Сантехник и Электрик на дом в Тюмени",
   },
   alternates: {
-    canonical: "https://santikhink-electric.online/services",
+    canonical: "https://www.santikhink-electric.online/services",
   },
-  authors: [{ name: "Сантехник Тюмень", url: "https://santikhink-electric.online/services" }],
+  authors: [{ name: "Сантехник и Электрик на дом в Тюмени ", url: "https://www.santikhink-electric.online/services" }],
   robots: "index, follow",
-  metadataBase: new URL("https://santikhink-electric.online/services"),
+  metadataBase: new URL("https://www.santikhink-electric.online/services"),
   other: {
     "geo.region": "RU-TYU",
     "geo.placename": "Тюмень",
@@ -63,72 +69,72 @@ const services: Service[] = [
   {
     icon: <FaTint className="h-12 w-12 mb-4 text-primary" />,
     title: "Устранение протечек",
-    description: "Устранение протечек раковины, смесителя, унитаза, ванны или батареи.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Устранение протечек раковины, смесителя, унитаза, ванны или батареи.",
     price: "от 1 200 ₽",
   },
   {
     icon: <FaTools className="h-12 w-12 mb-4 text-primary" />,
     title: "Устранение засоров",
-    description: "Устранение засоров раковины, туалета, ванны или канализации.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Устранение засоров раковины, туалета, ванны или канализации.",
     price: "от 1 190 ₽",
   },
   {
     icon: <FaWrench className="h-12 w-12 mb-4 text-primary" />,
     title: "Установка смесителей",
-    description: "Установка смесителей на раковину, мойку, ванну или душевую кабину.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Установка смесителей на раковину, мойку, ванну или душевую кабину.",
     price: "от 1 190 ₽",
   },
   {
     icon: <FaShower className="h-12 w-12 mb-4 text-primary" />,
     title: "Ремонт душевой кабины",
-    description: "Ремонт, герметизация и установка душевых кабин.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для герметизация и установка душевых кабин.",
     price: "от 2 890 ₽",
   },
   {
     icon: <FaToilet className="h-12 w-12 mb-4 text-primary" />,
     title: "Установка унитаза",
-    description: "Установка напольных, подвесных унитазов и инсталляций.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для  Установка напольных, подвесных унитазов и инсталляций.",
     price: "от 2 050 ₽",
   },
   {
     icon: <FaBath className="h-12 w-12 mb-4 text-primary" />,
     title: "Ремонт сантехники",
-    description: "Ремонт и замена сантехнического оборудования любой сложности.",
+    description: "Вызов сантехника и электрика на дом в Тюмени дляРемонт и замена сантехнического оборудования любой сложности.",
     price: "от 1 500 ₽",
   }, {
     icon: <FaPlug className="h-12 w-12 mb-4 text-primary" />,
     title: "Ремонт электропроводки",
-    description: "Диагностика и ремонт электропроводки в квартирах и домах.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Диагностика и ремонт электропроводки в квартирах и домах.",
     price: "от 2 500 ₽",
   },
   {
     icon: <FaLightbulb className="h-12 w-12 mb-4 text-primary" />,
     title: "Установка светильников",
-    description: "Монтаж потолочных, настенных и точечных светильников.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Монтаж потолочных, настенных и точечных светильников.",
     price: "от 1 500 ₽",
   },
   {
     icon: <FaBolt className="h-12 w-12 mb-4 text-primary" />,
     title: "Замена электрощитка",
-    description: "Установка и модернизация распределительных щитов.",
+    description: "Вызов сантехника и электрика на дом в Тюмени для Установка и модернизация распределительных щитов.",
     price: "от 3 800 ₽",
   },
   {
     icon: <FaCar className="h-12 w-12 mb-4 text-primary" />,
     title: "Установка розеток",
-    description: "Монтаж силовых розеток для бытовой техники и электроплит.",
+    description: " Вызов сантехника и электрика на дом в Тюмени для Монтаж силовых розеток для бытовой техники и электроплит.",
     price: "от 900 ₽",
   },
   {
     icon: <FaFire className="h-12 w-12 mb-4 text-primary" />,
     title: "Подключение варочных панелей",
-    description: "Профессиональное подключение варочных поверхностей и духовых шкафов.",
+    description: " Вызов сантехника и электрика на дом в Тюмени для Профессиональное подключение варочных поверхностей и духовых шкафов.",
     price: "от 2 200 ₽",
   },
   {
     icon: <FaCogs className="h-12 w-12 mb-4 text-primary" />,
     title: "Монтаж электросчетчиков",
-    description: "Установка и поверка однофазных и трехфазных счетчиков.",
+    description: " Вызов сантехника и электрика на дом в Тюмени для Установка и поверка однофазных и трехфазных счетчиков.",
     price: "от 4 000 ₽",
   },
   {
@@ -186,10 +192,13 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-
-          <CTASection />
+          
         </div>
       </section>
+        <WhyChooseUs/>
+        <CTASection />
+        <FAQSection/>
+          
     </>
   );
 }

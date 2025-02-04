@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const SITE_URL = 'https://santikhink-electric.online/'
+  const SITE_URL = 'https://www.santikhink-electric.online'
   return {
     rules: {
       userAgent: '*',

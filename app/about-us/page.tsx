@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import { Metadata } from "next";
 import CTASection from "../../components/CtaSection";
+import ServicesSection from "../../components/ServicesSection";
+import FAQSection from "../faq/FAQSection";
 
 // Metadata Configuration
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     "сантехник круглосуточно",
   ],
   authors: [{ name: "Сантехник и Электрик Тюмень " }],
-  metadataBase: new URL("https://santikhink-electric.online/about-us"),
+  metadataBase: new URL("https://www.santikhink-electric.online/about-us"),
   openGraph: {
     type: "website",
     url: "/about",
@@ -100,8 +102,9 @@ export default function AboutUsPage() {
             />
           </div>
         </div>
-
+        <ServicesSection/>
         <CTASection />
+        <FAQSection/>
       </div>
     </section>
   );

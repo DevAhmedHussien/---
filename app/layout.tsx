@@ -5,6 +5,7 @@ import { Navigation } from '../components/navigation';
 import { Footer } from '../components/footer';
 import Link from 'next/link';
 
+
 const inter = Inter({ 
   subsets: ['latin'], 
   preload: true,
@@ -17,36 +18,25 @@ export const metadata: Metadata = {
     template: "%s | Сантехник и Электрик Тюмень"
   },
   description: 'Срочный вызов сантехника и электрика в Тюмени. Устранение протечек, засоров, ремонт электропроводки. Гарантия 2 года, скидки пенсионерам! Приедем за 30 минут. Работаем 24/7.',
-  keywords: [
+  keywords: ["Опытные сантехники электрики с лицензией СРО Тюмень","Лучший сантехник электрик Тюмень с гарантией",
     'Вызов сантехник Тюмень', 'вызов электрика Тюмень срочно', 'аварийный сантехника тюмень','Вызов сантехник и электрик в Тюмени',
-    'сантехнические услуги Тюмень недорого', 'устранение засоров канализации Тюмень',
+    'сантехнические услуги Тюмень недорого', 'устранение засоров канализации Тюмень', "Кто делает срочный ремонт сантехники с подключением бытовой техники Тюмень",
     'ремонт сантехники с гарантией Тюмень', 'установка унитаза Тюмень цена',
     'электрик на дом Тюмень дешево', 'скидки на сантехработы пенсионерам Тюмень',
     'круглосуточный сантехник Тюмень', 'ремонт электропроводки в квартире Тюмень'
   ],
   alternates: {
-    canonical: 'https://santikhink-electric.online'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Срочный вызов сантехника и электрика в Тюмени 24/7",
-    description: 'Устранение протечек, засоров, ремонт электропроводки. Гарантия 2 года! Приедем за 30 минут. ☎ +7 (909) 181-82-42',
-    images: [{ 
-      url: 'https://santikhink-electric.online/opengraph-image.png',
-      width: 1200,
-      height: 630,
-      alt: 'Вызов сантехник и электрик Тюмень' 
-    }]
+    canonical: 'https://www.santikhink-electric.online'
   },
   openGraph: {
     locale: 'ru_RU',
     type: 'website',
-    siteName: 'Сантехник & Электрик Тюмень',
+    siteName: 'Сантехник и Электрик на дом в Тюмени ',
     title: "Круглосуточный вызов сантехника и электрика в Тюмени | 24/7",
     description: 'Срочный ремонт сантехники и электропроводки. Гарантия 2 года, работаем без выходных! Приедем за 30 минут. ☎ +7 (909) 181-82-42',
-    url: 'https://santikhink-electric.online',
+    url: 'https://www.santikhink-electric.online',
     images: [{
-      url: 'https://santikhink-electric.online/opengraph-image.png',
+      url: 'https://www.santikhink-electric.online/opengraph-image.png',
       width: 1200,
       height: 630,
       alt: 'Сантехнические услуги в Тюмени'
@@ -67,7 +57,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Сантехник & Электрик Тюмень',
-    image: 'https://santikhink-electric.online/opengraph-image.png',
+    image: 'https://www.santikhink-electric.online/opengraph-image.png',
     telephone: '+79091818242',
     email: 'vash72dom@gmail.com',
     priceRange: "₽₽",
@@ -156,3 +146,4 @@ export default function RootLayout({
     </html>
   );
 }
+

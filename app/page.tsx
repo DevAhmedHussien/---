@@ -1,6 +1,8 @@
 import CTASection from "../components/CtaSection";
 import HeroSection from "../components/HeroSection";
+import PlumbingElectricServices from "../components/PlumbingElectricServices";
 import { RecentWorks } from "../components/RecentWorks";
+import CustomerReviews from "../components/Review";
 import ServicesSection from "../components/ServicesSection";
 import { WorkExperience } from "../components/WorkExperience";
 import WorkProcessSection from "../components/WorkProcessSection";
@@ -11,12 +13,11 @@ import FAQSection from "./faq/FAQSection";
 
 export default function Home() {
   return (
-      
       <div>
-
       {/* Hero Section */}
       <HeroSection/>
 
+      <PlumbingElectricServices/>
       {/* services section */}
       <ServicesSection/>
 
@@ -38,6 +39,7 @@ export default function Home() {
       {/* Cta  */}
       <CTASection/>
 
+<CustomerReviews/>
       {/* about Ua */}
       <AboutUs/>
       {/* <ContactForm/> */}

@@ -1,6 +1,7 @@
 
 import { Wrench, Users } from "lucide-react";
 import Image from "next/image";
+import WhyChooseUs from "../WhyChooseUs";
 
 export default function AboutUs() {
   return (
@@ -58,13 +59,13 @@ export default function AboutUs() {
 
         <section className="seo-content">
         {/* Emergency Banner with CTA */}
-        <div className="emergency-banner bg-blue-900 text-white py-12 px-6 relative overflow-hidden">
+        <div className="emergency-banner bg-blue-600 text-white py-12 px-6 relative overflow-hidden">
           <div className="max-w-4xl mx-auto relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
               Аварийный сантехник и электрик в Тюмени - круглосуточный выезд 24/7
             </h1>
             <p className="text-lg mb-8 opacity-90">
-              Срочный вызов сантехника на дом в Тюмени | Срочный вызов электрика на дом в Тюмени с гарантией качества работ. 
+              Срочный вызов сантехник и электрик на дом в Тюмени с гарантией качества работ. 
               Устраним протечки, засоры, выполним ремонт сантехники и электропроводки 
               за 30-60 минут. Работаем со всеми районами Тюмени.
             </p>
@@ -133,27 +134,7 @@ export default function AboutUs() {
     </div>
   </article>
 
-      {/* Guarantees Section */}
-      <div className="guarantees bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Почему выбирают нас
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {title: 'Гарантия 2 года', icon: '🛡️'},
-              {title: 'Оплата картой', icon: '💳'},
-              {title: 'Скидки пенсионерам', icon: '👵'},
-              {title: 'Бесплатный выезд', icon: '🚗'},
-            ].map((benefit) => (
-              <div key={benefit.title} className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-lg font-semibold">{benefit.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <WhyChooseUs/>
 
 
     </section>

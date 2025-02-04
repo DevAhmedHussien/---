@@ -16,16 +16,10 @@ export function Contact() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          < h2
-            className="text-3xl font-bold mb-4"
-          
-          >
+          < h2 className="text-3xl font-bold mb-4" >
             Нужна помощь с сантехникой?
           </ h2>
-          < p
-            className="text-muted-foreground max-w-2xl mx-auto mb-16"
-          
-          >
+          < p className="text-muted-foreground max-w-2xl mx-auto mb-16">
             Оставьте заявку, и наш мастер приедет к вам в течение 30 минут для решения любых сантехнических проблем.
           </ p>
         </div>

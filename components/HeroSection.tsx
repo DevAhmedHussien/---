@@ -3,21 +3,22 @@ import Link from "next/link";
 import SocialMedia from "./SocialMedia";
 import { Button } from "./ui/button";
 
+
 const HeroSection: React.FC = () => {
   return (
     <div className="relative h-[75vh]">
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0))]"/>
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0))]" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full flex items-center">
         <div className="text-center space-y-12" style={{ margin: "0 auto" , width:'100%'}}>
-          < h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             Вызов сантехника и электрика на дом в{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Тюмени
             </span>
-          </ h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto" >
-            Приедем в черте города за 30 минут. Гарантия на работы, скидки пенсионерам и новоселам.
-          </ p>
+          </h1>
+          <h2 className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          Опытные сантехники электрики с лицензией СРО Тюмень , Приедем в черте города за 30 минут. Быстрый ремонт за 30 минут . Гарантия на работы, скидки пенсионерам и новоселам.
+          </h2>
           <div >
             <SocialMedia />
           </div>

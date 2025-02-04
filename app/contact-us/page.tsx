@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import FAQSection from "../faq/FAQSection";
 
 // Metadata and Keywords Configuration
 const metadata = {
@@ -19,7 +20,7 @@ const metadata = {
     description:
       "Свяжитесь с нами для профессиональных сантехнических услуг в Тюмени. Мы готовы помочь с устранением протечек, засоров, установкой и ремонтом сантехники.",
     image: "/images/contact-us-plumber.jpg",
-    url: "https://santikhink-electric.online/contact-us",
+    url: "https://www.santikhink-electric.online/contact-us",
   },
 };
 
@@ -130,6 +131,8 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
+      <FAQSection/>
+
     </>
   );
 }

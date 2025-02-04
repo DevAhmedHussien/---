@@ -3,7 +3,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://santikhink-electric.online' 
+  const baseUrl = 'https://www.santikhink-electric.online' 
 
   return [
     {
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/about-us`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
@@ -28,13 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/contact-us`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 1.0,
     },
     // Add more pages as needed
   ]
