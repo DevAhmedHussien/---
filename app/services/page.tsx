@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://www.santikhink-electric.online/services",
+    url: "https://santikhink-electric.online/services",
     title: "Услуги | Сантехник и Электрик на дом в Тюмени ",
     description: "Профессиональные сантехнические услуги в Тюмени. Устранение протечек, засоров, установка и ремонт сантехники. Гарантия качества и доступные цены.",
     images: [{
-      url: "https://www.santikhink-electric.online/images/services-plumber.jpg",
+      url: "https://santikhink-electric.online/images/services-plumber.jpg",
       width: 1200,
       height: 630,
       alt: "Наши сантехнические услуги в Тюмени",
@@ -54,11 +54,11 @@ export const metadata: Metadata = {
     siteName: "Сантехник и Электрик на дом в Тюмени",
   },
   alternates: {
-    canonical: "https://www.santikhink-electric.online/services",
+    canonical: "https://santikhink-electric.online/services",
   },
-  authors: [{ name: "Сантехник и Электрик на дом в Тюмени ", url: "https://www.santikhink-electric.online/services" }],
+  authors: [{ name: "Сантехник и Электрик на дом в Тюмени ", url: "https://santikhink-electric.online/services" }],
   robots: "index, follow",
-  metadataBase: new URL("https://www.santikhink-electric.online/services"),
+  metadataBase: new URL("https://santikhink-electric.online/services"),
   other: {
     "geo.region": "RU-TYU",
     "geo.placename": "Тюмень",

@@ -20,7 +20,7 @@ const metadata = {
     description:
       "Свяжитесь с нами для профессиональных сантехнических услуг в Тюмени. Мы готовы помочь с устранением протечек, засоров, установкой и ремонтом сантехники.",
     image: "/images/contact-us-plumber.jpg",
-    url: "https://www.santikhink-electric.online/contact-us",
+    url: "https://santikhink-electric.online/contact-us",
   },
 };
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'круглосуточный сантехник Тюмень', 'ремонт электропроводки в квартире Тюмень'
   ],
   alternates: {
-    canonical: 'https://www.santikhink-electric.online'
+    canonical: 'https://santikhink-electric.online'
   },
   openGraph: {
     locale: 'ru_RU',
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     siteName: 'Сантехник и Электрик на дом в Тюмени ',
     title: "Круглосуточный вызов сантехника и электрика в Тюмени | 24/7",
     description: 'Срочный ремонт сантехники и электропроводки. Гарантия 2 года, работаем без выходных! Приедем за 30 минут. ☎ +7 (909) 181-82-42',
-    url: 'https://www.santikhink-electric.online',
+    url: 'https://santikhink-electric.online',
     images: [{
-      url: 'https://www.santikhink-electric.online/opengraph-image.png',
+      url: 'https://santikhink-electric.online/opengraph-image.png',
       width: 1200,
       height: 630,
       alt: 'Сантехнические услуги в Тюмени'
@@ -57,7 +57,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Сантехник & Электрик Тюмень',
-    image: 'https://www.santikhink-electric.online/opengraph-image.png',
+    image: 'https://santikhink-electric.online/opengraph-image.png',
     telephone: '+79091818242',
     email: 'vash72dom@gmail.com',
     priceRange: "₽₽",

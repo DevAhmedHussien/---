@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "сантехник круглосуточно",
   ],
   authors: [{ name: "Сантехник и Электрик Тюмень " }],
-  metadataBase: new URL("https://www.santikhink-electric.online/about-us"),
+  metadataBase: new URL("https://santikhink-electric.online/about-us"),
   openGraph: {
     type: "website",
     url: "/about",
