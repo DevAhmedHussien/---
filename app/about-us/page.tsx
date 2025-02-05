@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import CTASection from "../../components/CtaSection";
 import ServicesSection from "../../components/ServicesSection";
 import FAQSection from "../faq/FAQSection";
+import Head from "next/head";
 
 // Metadata Configuration
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     }]
   },
   alternates: {
-    canonical: "/about"
+    canonical: "https://www.santikhink-electric.online/about-us"
   },
   robots: "index, follow",
   other: {
@@ -55,6 +56,11 @@ export const metadata: Metadata = {
 
 export default function AboutUsPage() {
   return (
+    <>
+     <Head>
+    <link rel="canonical" href="https://www.santikhink-electric.online/about-us" />
+    </Head>
+    
     <section className="py-20" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-center mb-8">О нашей компании</h1>
@@ -107,5 +113,7 @@ export default function AboutUsPage() {
         <FAQSection/>
       </div>
     </section>
+    </>
+   
   );
 }

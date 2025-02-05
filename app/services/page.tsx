@@ -9,6 +9,7 @@ import { FaTint,  FaWrench, FaShower,  FaBath, FaUserCog ,FaToilet,
 import CTASection from "../../components/CtaSection";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import FAQSection from "../faq/FAQSection";
+import Head from "next/head";
 
 interface Service {
   icon: JSX.Element;
@@ -164,6 +165,9 @@ export default function ServicesPage() {
 
   return (
     <>
+     <Head>
+    <link rel="canonical" href="https://www.santikhink-electric.online/" />
+    </Head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

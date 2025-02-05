@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'круглосуточный сантехник Тюмень', 'ремонт электропроводки в квартире Тюмень'
   ],
   alternates: {
-    canonical: 'https://santikhink-electric.online'
+    canonical: 'https://www.santikhink-electric.online' , 
   },
   openGraph: {
     locale: 'ru_RU',
@@ -88,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://santikhink-electric.online" />
+        <link rel="canonical" href="https://www.santikhink-electric.online/" />
         <meta name="yandex-verification" content="4986befe267638de" />
         <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION" />
         <meta name="geo.position" content="57.152985;65.541227" />
