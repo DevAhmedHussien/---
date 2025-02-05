@@ -20,7 +20,7 @@ const FAQPage = () => {
       description:
         "Найдите ответы на часто задаваемые вопросы о наших сантехнических услугах в Тюмени. Узнайте больше о ценах, гарантиях и процессе работы.",
       image: "/images/faq-plumber.jpg",
-      url: "https://santikhink-electric.online/faq",
+      url: "https://www.santikhink-electric.online/faq",
     },
   };
 

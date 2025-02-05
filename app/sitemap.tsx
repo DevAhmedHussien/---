@@ -3,7 +3,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://santikhink-electric.online' 
+  const baseUrl = 'https://www.santikhink-electric.online' 
 
   return [
     {
