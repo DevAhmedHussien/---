@@ -166,7 +166,8 @@ export default function ServicesPage() {
   return (
     <>
      <Head>
-    <link rel="canonical" href="https://www.santikhink-electric.online/" />
+     <meta name="description" content="Срочный вызов сантехника и электрика в Тюмени. Опытные специалисты приедут за 30 минут. Гарантия на все работы. Работаем 24/7." />
+      <link rel="canonical" href="https://www.santikhink-electric.online/services" />
     </Head>
       <script
         type="application/ld+json"
