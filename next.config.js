@@ -10,7 +10,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  trailingSlash: true, // Ensures all static files get exported correctly
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      global.performance = global.performance || { now: () => new Date().getTime() };
+    }
+    return config;
+  }
 };
 
 module.exports = nextConfig;
