@@ -22,7 +22,7 @@ export function Navigation() {
               <Wrench className="h-8 w-8 text-primary" />
               < span className="font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"  >
                 {/* Тюмень */}
-                Сантехник & Электрик 
+                Сантехник и Электрик 
               </ span>
             </Link>
           </div>

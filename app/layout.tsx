@@ -56,7 +56,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Сантехник & Электрик Тюмень',
+    name: 'Сантехник и Электрик',
     image: 'https://www.santikhink-electric.online/opengraph-image.png',
     telephone: '+79091818242',
     email: 'vash72dom@gmail.com',

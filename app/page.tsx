@@ -15,7 +15,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Сантехник & Электрик Тюмень",
+    "name": "Сантехник и Электрик",
     "image": "https://www.santikhink-electric.online/opengraph-image.png",
     "telephone": "+7 909 181 82 42",
     "email": "vash72dom@gmail.com",
@@ -71,7 +71,7 @@ export default function Home() {
         <meta property="og:description" content="Срочный вызов сантехника и электрика в Тюмени. Приедем за 30 минут. Работаем 24/7. Гарантия на все услуги, скидки пенсионерам и новоселам." />
         <meta property="og:image" content="https://www.santikhink-electric.online/opengraph-image.png" />
         <meta property="og:url" content="https://www.santikhink-electric.online/" />
-        <meta property="og:site_name" content="Сантехник & Электрик Тюмень" />
+        <meta property="og:site_name" content="Сантехник и Электрик Тюмень" />
         <link rel="canonical" href="https://www.santikhink-electric.online/" />
         <meta name="yandex-verification" content="4986befe267638de" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
