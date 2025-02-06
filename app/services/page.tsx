@@ -147,21 +147,6 @@ const services: Service[] = [
 ] as const;
 
 export default function ServicesPage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: services.map((service, index) => ({
-      "@type": "Service",
-      position: index + 1,
-      name: service.title,
-      description: service.description,
-      offers: {
-        "@type": "Offer",
-        price: service.price,
-        priceCurrency: "RUB"
-      }
-    }))
-  };
 
   return (
     <>
@@ -169,10 +154,7 @@ export default function ServicesPage() {
      <meta name="description" content="Срочный вызов сантехника и электрика в Тюмени. Опытные специалисты приедут за 30 минут. Гарантия на все работы. Работаем 24/7." />
       <link rel="canonical" href="https://www.santikhink-electric.online/services" />
     </Head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+    
 
       <section className="py-20" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
