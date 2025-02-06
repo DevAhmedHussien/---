@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  images: { 
+  images: {   
     unoptimized: true
   },
   typescript: {
@@ -9,7 +9,8 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true
-  }
+  },
+  trailingSlash: true, // Ensures all static files get exported correctly
 };
 
 module.exports = nextConfig;
