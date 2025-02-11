@@ -10,16 +10,16 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      global.performance = global.performance || { now: () => new Date().getTime() };
-    }
-    return config;
-  },
-  experimental: {
-    outputFileTracingIncludes: {
-      '*': ['./public/yandex_309d527f9b6b86d9.html']
-    }}
+  // webpack: (config, { isServer }) => {
+  //   if (isServer) {
+  //     global.performance = global.performance || { now: () => new Date().getTime() };
+  //   }
+  //   return config;
+  // },
+  // experimental: {
+  //   outputFileTracingIncludes: {
+  //     '*': ['./public/yandex_309d527f9b6b86d9.html']
+  //   }}
 };
 
 module.exports = nextConfig;
