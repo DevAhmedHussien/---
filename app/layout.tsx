@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     }]
   },
   verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // Add from Search Console
-    yandex: '4986befe267638de'
+    google: '9zZOKgSkwdOvSHSQjvF0jCzqZShvgZGDoI6jss99KXs', // Add from Search Console
+    yandex: '309d527f9b6b86d9'
   }
 };
 
@@ -89,8 +89,8 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://www.santikhink-electric.online/" />
-        <meta name="yandex-verification" content="4986befe267638de" />
-        {/* <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION" /> */}
+        <meta name="yandex-verification" content="309d527f9b6b86d9" />
+        <meta name="google-site-verification" content="9zZOKgSkwdOvSHSQjvF0jCzqZShvgZGDoI6jss99KXs" />
         <meta name="geo.position" content="57.152985;65.541227" />
         <meta name="geo.placename" content="Тюмень" />
         <meta name="geo.region" content="RU-TYU" />
