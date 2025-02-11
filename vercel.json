@@ -1,10 +1,10 @@
-// {
-//     "redirects": [
-//       {
-//         "source": "/yandex_309d527f9b6b86d9.html",
-//         "destination": "/yandex_309d527f9b6b86d9.html",
-//         "permanent": true
-//       }
-//     ]
-//   }
+{
+    "redirects": [
+      {
+        "source": "/yandex_309d527f9b6b86d9",
+        "destination": "/yandex_309d527f9b6b86d9.html",
+        "permanent": true
+      }
+    ]
+  }
   
