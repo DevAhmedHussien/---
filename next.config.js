@@ -18,7 +18,7 @@ const nextConfig = {
   },
   experimental: {
     outputFileTracingIncludes: {
-      '*': ['./public/yandex_4986befe267638de.html']
+      '*': ['./public/yandex_309d527f9b6b86d9.html']
     }}
 };
 
