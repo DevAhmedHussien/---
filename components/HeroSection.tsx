@@ -11,14 +11,16 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full flex items-center">
         <div className="text-center space-y-12" style={{ margin: "0 auto" , width:'100%'}}>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            Вызов сантехника и электрика на дом в{" "}
+          Вызов сантехник и электрик в {" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Тюмени
+            Тюмени {" "} 24/7
             </span>
           </h1>
           <h2 className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Опытные сантехники электрики с лицензией СРО Тюмень , Приедем в черте города за 30 минут. Быстрый ремонт за 30 минут . Гарантия на работы, скидки пенсионерам и новоселам.
+            Опытные сантехники электрики с лицензией СРО Тюмень , Приедем в черте города за 30 минут. Быстрый ремонт за 30 минут . Гарантия на работы, скидки пенсионерам и новоселам.
           </h2>
+        
+          <h3> Ремонт за 30 минут </h3>
           <div >
             <SocialMedia />
           </div>
