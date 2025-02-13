@@ -6,7 +6,7 @@ const PlumbingElectricServices = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Вызов сантехника и электрика на дом в Тюмени <span className="text-primary">24/7</span>
+          Вызов сантехника и электрика на дом в Тюмени 
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Экстренный выезд за 30 минут в любой район Тюмени | Гарантия до 3 лет | Скидки пенсионерам
